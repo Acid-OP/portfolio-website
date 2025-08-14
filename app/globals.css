@@ -24,3 +24,42 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@keyframes rise {
+  0% {
+    top: 100%;
+    transform: translateX(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(2px);
+  }
+  75% {
+    transform: translateX(-2px);
+  }
+  100% {
+    top: -10%;
+    opacity: 0;
+  }
+}
+
+.animate-rise {
+  animation: rise linear infinite;
+}
+
+.glow-bottom::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  height: 50%;
+  background: radial-gradient(ellipse at bottom, rgba(255,255,255,0.25), transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
