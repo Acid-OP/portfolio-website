@@ -2,7 +2,7 @@ import Navbar from "./Navbar";
 
 export default function Hero() {
   return (
-    <section className="flex flex-col min-h-screen bg-[#f8f8f8]">
+    <section className="flex flex-col min-h-screen bg-[#f8f8f8] p-8">
       <Navbar />
       
       {/* Hero content area */}
