@@ -152,8 +152,7 @@ export default function Page() {
             <section id="contributions">
         <div className="w-full max-w-4xl mx-auto">
           <BlurFade delay={BLUR_FADE_DELAY * 13}>
-            <GitHubContributions
-/>
+            <GitHubContributions/>
           </BlurFade>
         </div>
       </section>

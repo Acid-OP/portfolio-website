@@ -3,13 +3,10 @@ import GitHubCalendar from 'react-github-calendar';
 
 export default function GitHubContributions() {
     return (
-        <div className="w-full flex flex-col items-center mt-8 mb-4 gap-4 max-sm:hidden">
+        <div className="w-full flex flex-col items-center mb-4 gap-4 max-sm:hidden">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
                 <div className="space-y-2">
-                    <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
-                        GitHub Activity
-                    </div>
-                    <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                    <h2 className="text-lg font-semibold tracking-tighter sm:text-3xl">
                         GitHub Contributions
                     </h2>
                 </div>
@@ -21,7 +18,7 @@ export default function GitHubContributions() {
                     blockMargin={3}
                     theme={{
                         light: ["#1e1e2f", "#5a3e7a", "#7e5aa2", "#a87cc3", "#d9a9e6"],
-                        dark: ["#1e1e2f", "#5a3e7a", "#7e5aa2", "#a87cc3", "#d9a9e6"]
+                        dark: ["#ebedf0", "#9be9a8", "#40c463", "#30a14e", "#216e39"]
                     }}
                 />
             </Link>

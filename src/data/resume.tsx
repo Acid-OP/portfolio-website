@@ -104,7 +104,7 @@ export const DATA = {
       dates: "Jul 2025 - Sep 2025",
       active: true,
       description:
-        "Built a real-time multiplayer chess application with authentication, matchmaking, and seamless gameplay. Implemented WebSocket-based communication for live matches, integrated a chess engine for bot games, and designed a responsive UI for smooth player experience. Architected the backend with Node.js, Express, and PostgreSQL while ensuring scalability and clean code structure.",
+        "Built a real-time multiplayer chess application with authentication, matchmaking, and seamless gameplay. Implemented WebSocket-based communication for live matches.",
       technologies: [
         "React",
         "TypeScript",
