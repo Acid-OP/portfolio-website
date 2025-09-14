@@ -1,10 +1,10 @@
-import BlurFade from "@/components/magicui/blur-fade";
-import BlurFadeText from "@/components/magicui/blur-fade-text";
-import { ProjectCard } from "@/components/project-card";
-import { ResumeCard } from "@/components/resume-card";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Badge } from "@/components/ui/badge";
-import { DATA } from "@/data/resume";
+import BlurFade from "@/src/components/magicui/blur-fade";
+import BlurFadeText from "@/src/components/magicui/blur-fade-text";
+import { ProjectCard } from "@/src/components/project-card";
+import { ResumeCard } from "@/src/components/resume-card";
+import { Avatar, AvatarFallback, AvatarImage } from "@/src/components/ui/avatar";
+import { Badge } from "@/src/components/ui/badge";
+import { DATA } from "@/src/data/resume";
 import Markdown from "react-markdown";
 
 const BLUR_FADE_DELAY = 0.04;
