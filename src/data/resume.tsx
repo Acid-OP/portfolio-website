@@ -1,8 +1,8 @@
-import { Icons } from "@/src/components/icons";
+import { Icons } from "@/components/icons";
 import { Globe, HomeIcon, NotebookIcon } from "lucide-react";
 
 export const DATA = {
-  name: "Rudra",
+  name: "Gaurav Kapur",
   url: "https://portfolio.rudraa.online",
   description:
     "i build, i learn, i tweak — that’s pretty much it. keeps life interesting.",
@@ -21,26 +21,26 @@ export const DATA = {
   ],
   navbar: [{ href: "/", icon: HomeIcon, label: "Home" }],
   contact: {
-    email: "goudarudra23@gmail.com",
-    tel: "+91 7016093549",
+    email: "gauravkapur596@gmail.com",
+    tel: "+91 7011xxxxxx",
     social: {
       GitHub: {
         name: "GitHub",
-        url: "https://github.com/rudraprasaaad",
+        url: "https://github.com/Acid-OP",
         icon: Icons.github,
 
         navbar: true,
       },
       LinkedIn: {
         name: "LinkedIn",
-        url: "https://www.linkedin.com/in/rudraprasad-gouda-80a659249/",
+        url: "https://www.linkedin.com/in/gaurav-kapur-a3286b258/",
         icon: Icons.linkedin,
 
         navbar: true,
       },
       X: {
         name: "X",
-        url: "https://x.com/ruprax",
+        url: "https://x.com/GauravKapurr",
         icon: Icons.x,
 
         navbar: true,
@@ -81,12 +81,12 @@ export const DATA = {
   ],
   education: [
     {
-      school: "Gujarat Technological University",
-      href: "https://www.gtu.ac.in/",
-      degree: "BE in CSE",
+      school: "Delhi Technological University",
+      href: "https://www.dtu.ac.in/",
+      degree: "BE in CE",
       logoUrl: "/gtu.jpeg",
-      start: "2022",
-      end: "2025",
+      start: "2023",
+      end: "2027",
     },
     {
       school: "Gujarat Technological University",
