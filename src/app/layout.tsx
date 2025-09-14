@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     yandex: "",
   },
   icons: {
-    icon: "/rudra.jpg",
+    icon: "/madara.jpg",
   },
 };
 

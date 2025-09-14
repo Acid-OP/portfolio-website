@@ -2,13 +2,13 @@ import { Icons } from "@/components/icons";
 import { Globe, HomeIcon, NotebookIcon } from "lucide-react";
 
 export const DATA = {
-  name: "Gaurav Kapur",
+  name: "Gaurav",
   url: "https://portfolio.rudraa.online",
   description:
-    "i build, i learn, i tweak — that’s pretty much it. keeps life interesting.",
+    "i build digitial experiences that tells a story.",
   summary:
     "i build, break, and rebuild — that’s how i learn. i like stacking small wins that compound over time. for me, the process is the fun part.",
-  avatarUrl: "/rudra.jpg",
+  avatarUrl: "/madara.jpg",
   skills: [
     "React",
     "Next.js",

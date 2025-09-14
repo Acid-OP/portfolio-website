@@ -1,3 +1,4 @@
+import GitHubContributions from "@/components/ui/gitgraph";
 import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
 import { ProjectCard } from "@/components/project-card";
@@ -5,6 +6,7 @@ import { ResumeCard } from "@/components/resume-card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { DATA } from "@/data/resume";
+import { GitGraph } from "lucide-react";
 import Markdown from "react-markdown";
 
 const BLUR_FADE_DELAY = 0.04;
@@ -20,7 +22,7 @@ export default function Page() {
                 delay={BLUR_FADE_DELAY}
                 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none"
                 yOffset={8}
-                text={`sup, ${DATA.name.split(" ")[0].toLowerCase()} here`}
+                text={`Sup, ${DATA.name} here`}
               />
               <BlurFadeText
                 className="max-w-[600px] md:text-xl"
@@ -147,6 +149,15 @@ export default function Page() {
           </div>
         </div>
       </section>
+            <section id="contributions">
+        <div className="w-full max-w-4xl mx-auto">
+          <BlurFade delay={BLUR_FADE_DELAY * 13}>
+            <GitHubContributions
+/>
+          </BlurFade>
+        </div>
+      </section>
+
     </main>
   );
 }
