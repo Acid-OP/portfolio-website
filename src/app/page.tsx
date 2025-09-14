@@ -129,23 +129,29 @@ export default function Page() {
             </div>
           </BlurFade>
           <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 max-w-[800px] mx-auto">
-            {DATA.projects.map((project, id) => (
-              <BlurFade
-                key={project.title}
-                delay={BLUR_FADE_DELAY * 12 + id * 0.05}
-              >
-                <ProjectCard
-                  href={project.href}
-                  key={project.title}
-                  title={project.title}
-                  description={project.description}
-                  dates={project.dates}
-                  tags={project.technologies}
-                  image={project.image}
-                  links={project.links}
-                />
-              </BlurFade>
-            ))}
+            <BlurFade delay={BLUR_FADE_DELAY * 12}>
+              <ProjectCard
+                href={DATA.projects[0]?.href}
+                title={DATA.projects[0]?.title}
+                description={DATA.projects[0]?.description}
+                dates={DATA.projects[0]?.dates}
+                tags={DATA.projects[0]?.technologies}
+                image={DATA.projects[0]?.image}
+                links={DATA.projects[0]?.links}
+              />
+            </BlurFade>
+            
+            <BlurFade delay={BLUR_FADE_DELAY * 12 + 0.05}>
+              <ProjectCard
+                href={DATA.projects[0]?.href}
+                title={DATA.projects[0]?.title}
+                description={DATA.projects[0]?.description}
+                dates={DATA.projects[0]?.dates}
+                tags={DATA.projects[0]?.technologies}
+                image={DATA.projects[0]?.image}
+                links={DATA.projects[0]?.links}
+              />
+            </BlurFade>
           </div>
         </div>
       </section>
