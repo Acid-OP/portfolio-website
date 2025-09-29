@@ -101,12 +101,12 @@ export const DATA = {
   ],
   projects: [
     {
-      title: "Real-time Multiplayer Chess",
-      href: "https://chess.rudraa.online/",
-      dates: "Jul 2025 - Sep 2025",
+      title: "DrawDeck",
+      href:"//github.com/Acid-OP/second-brain-frontend",
+      dates: "May 2025 - Aug 2025",
       active: true,
       description:
-        "Built a real-time multiplayer chess application with authentication, matchmaking, and seamless gameplay. Implemented WebSocket-based communication for live matches.",
+        "Built a real-time collaborative canvas workspace with peer-to-peer video calling, synchronized canvas sharing and authentication.",
       technologies: [
         "React",
         "TypeScript",
@@ -120,11 +120,37 @@ export const DATA = {
       links: [
         {
           type: "Website",
-          href: "https://chess.rudraa.online/",
+          href: "https://drawdeck.xyz",
           icon: <Globe className="size-3" />,
         },
       ],
-      image: "/chess.png",
+      image: "/color-palette.png",
+    },
+     {
+      title: "Second Brain",
+      href: "https://secondbrain-hazel.vercel.app/",
+      dates: "Jan 2025 - March 2025",
+      active: true,
+      description:
+        "Built a personal knowledge hub for curating links across platforms, sharing collections with others, and finding saved content through semantic search",
+      technologies: [
+        "React",
+        "TypeScript",
+        "Node.js",
+        "Express.js",
+        "PostgreSQL",
+        "WebSockets",
+        "TailwindCSS",
+        "Docker",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://secondbrain-hazel.vercel.app/",
+          icon: <Globe className="size-3" />,
+        },
+      ],
+      image: "/brain.png",
     },
   ],
 } as const;

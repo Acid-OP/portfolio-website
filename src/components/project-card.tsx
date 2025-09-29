@@ -82,7 +82,7 @@ export function ProjectCard({
       </div>
 
       {/* Title and Description Section */}
-      <div className="mt-4 !pointer-events-auto">
+      <div className="mt-2 !pointer-events-auto">
         <Link 
           href={href || link || "#"} 
           target='_blank' 
@@ -92,23 +92,23 @@ export function ProjectCard({
             {title}
           </h1>
         </Link>
-        <Markdown className="prose max-w-full text-pretty text-sm dark:text-[#D1D5DB] mt-2 dark:prose-invert">
-          {description}
-        </Markdown>
+       <div className="text-sm text-gray-700 dark:text-[#D1D5DB] mt-2 leading-relaxed">
+        {description}
+       </div>
       </div>
 
-      {/* Tech Stack Tags */}
-      <div className="flex gap-1 mt-4 flex-wrap !pointer-events-auto">
-        {tags?.map((tech, idx) => (
-          <Badge 
-            key={idx} 
-            variant="outline" 
-            className="text-[10px] dark:hover:!bg-white hover:!bg-black hover:!text-white dark:hover:!text-black !pointer-events-auto"
-          >
-            {tech}
-          </Badge>
-        ))}
-      </div>
+    {/* Tech Stack Tags */}
+    <div className="flex gap-1 mt-4 flex-wrap !pointer-events-auto">
+      {tags?.map((tech, idx) => (
+        <Badge 
+          key={idx} 
+          variant="outline" 
+          className="text-[10px] hover:!bg-white dark:hover:!bg-black dark:hover:!text-white hover:!text-black !pointer-events-auto"
+        >
+          {tech}
+        </Badge>
+      ))}
+    </div>
 
       {/* Links Section */}
       <div className='mt-3 !pointer-events-auto flex gap-1'>
