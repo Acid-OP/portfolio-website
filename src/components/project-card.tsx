@@ -25,7 +25,7 @@ interface Props {
     href: string;
   }[];
   className?: string;
-  logo?: string; // Added logo prop like in your original
+  logo?: string; 
 }
 
 export function ProjectCard({
