@@ -10,14 +10,19 @@ export const DATA = {
     "i build, break, and rebuild — that’s how i learn. i like stacking small wins that compound over time. for me, the process is the fun part.",
   avatarUrl: "/madara.jpg",
   skills: [
-    "React",
+    "JavaScript",
+    "TypeScript",
     "Next.js",
-    "Typescript",
-    "Node.js",
-    "Go",
+    "Prisma",
+    "MongoDB",
     "Postgres",
-    "Docker",
+    "Node.js",
+    "Python",
+    "WebSocket",
+    "WebRTC",
     "Redis",
+    "Docker",
+    "AWS"
   ],
   navbar: [{ href: "/", icon: HomeIcon, label: "Home" }],
   contact: {
@@ -108,14 +113,15 @@ export const DATA = {
       description:
         "Built a real-time collaborative canvas workspace with peer-to-peer video calling, synchronized canvas sharing and authentication.",
       technologies: [
-        "React",
+        "Nextjs",
         "TypeScript",
         "Node.js",
-        "Express.js",
-        "PostgreSQL",
-        "WebSockets",
+        "WebRTC",
+        "Shadcn",
         "TailwindCSS",
+        "Websocket",
         "Docker",
+        "Nextauth"
       ],
       links: [
         {
@@ -134,14 +140,15 @@ export const DATA = {
       description:
         "Built a personal knowledge hub for curating links across platforms, sharing collections with others, and finding saved content through semantic search",
       technologies: [
-        "React",
         "TypeScript",
+        "React",
         "Node.js",
         "Express.js",
-        "PostgreSQL",
-        "WebSockets",
+        "MongoDB",
+        "Transformer",
         "TailwindCSS",
-        "Docker",
+        "Huggingface",
+        "chromadb"
       ],
       links: [
         {

@@ -81,7 +81,6 @@ export function ProjectCard({
         )}
       </div>
 
-      {/* Title and Description Section */}
       <div className="mt-2 !pointer-events-auto">
         <Link 
           href={href || link || "#"} 
@@ -103,7 +102,7 @@ export function ProjectCard({
         <Badge 
           key={idx} 
           variant="outline" 
-          className="text-[10px] hover:!bg-white dark:hover:!bg-black dark:hover:!text-white hover:!text-black !pointer-events-auto"
+          className="text-[10px] hover:!bg-black dark:hover:!bg-white dark:hover:!text-black hover:!text-white !pointer-events-auto"
         >
           {tech}
         </Badge>
@@ -137,6 +136,4 @@ export function ProjectCard({
       </div>
     </ShineBorder>
   </MagicCard>
-
-  );
-}
+)};

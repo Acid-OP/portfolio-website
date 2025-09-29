@@ -17,8 +17,8 @@ export default function GitHubContributions() {
                     blockSize={10}
                     blockMargin={3}
                     theme={{
-                        light: ["#1e1e2f", "#5a3e7a", "#7e5aa2", "#a87cc3", "#d9a9e6"],
-                        dark: ["#ebedf0", "#9be9a8", "#40c463", "#30a14e", "#216e39"]
+                        light: ["#2b2b3f", "#5a3e7a", "#7e5aa2", "#a87cc3", "#cfa3e0"],
+                        dark:  ["#ebedf0", "#9b59b6", "#8e44ad", "#7d3c98", "#672d7a"]
                     }}
                 />
             </Link>

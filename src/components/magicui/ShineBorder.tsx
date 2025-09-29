@@ -18,7 +18,7 @@ export default function ShineBorder({
   color = ["#A07CFE", "#FE8FB5", "#FFBE7B"],
   borderWidth = 1,
   borderRadius = 8,
-  duration = 14,
+  duration = 10,
 }: ShineBorderProps) {
   const colorArray = Array.isArray(color) ? color : [color];
   
@@ -35,9 +35,9 @@ export default function ShineBorder({
         style={{
           borderRadius: `${borderRadius}px`,
           padding: `${borderWidth}px`,
-          background: `linear-gradient(90deg, ${colorArray.join(", ")})`,
-          backgroundSize: "300% 300%",
-          animation: `shine ${duration}s ease infinite`,
+          background: `linear-gradient(90deg, ${colorArray.join(", ")}, ${colorArray[0]})`,
+          backgroundSize: "400% 400%",
+          animation: `shine ${duration}s linear infinite`,
           mask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
           maskComposite: "xor",
           WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
@@ -55,11 +55,8 @@ export default function ShineBorder({
           0% {
             background-position: 0% 50%;
           }
-          50% {
-            background-position: 100% 50%;
-          }
           100% {
-            background-position: 0% 50%;
+            background-position: 400% 50%;
           }
         }
       `}</style>
