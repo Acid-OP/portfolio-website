@@ -77,17 +77,9 @@ export default function Page() {
           <BlurFade delay={BLUR_FADE_DELAY * 11}>
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="">
-                {/* <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
-                  My Projects
-                </div> */}
                 <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
-                What I've Built
+                 What I{"'"}ve Built
                 </h2>
-                {/* <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  I&apos;ve worked on a variety of projects, from simple
-                  websites to complex web applications. Here are a few of my
-                  favorites.
-                </p> */}
               </div>
             </div>
           </BlurFade>
