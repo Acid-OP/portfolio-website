@@ -46,7 +46,7 @@ export const ResumeCard = ({
     >
       <Card className="flex">
         <div className="flex-none">
-<Avatar className="size-12 m-auto  bg-white dark:bg-black">
+          <Avatar className="size-12 m-auto  bg-white dark:bg-black">
             <AvatarImage
               src={logoUrl}
               alt={altText}
@@ -80,7 +80,7 @@ export const ResumeCard = ({
                   )}
                 />
               </h3>
-              <div className="text-xs sm:text-sm tabular-nums text-muted-foreground text-right">
+              <div className="text-xs sm:text-sm tabular-nums text-muted-foreground text-right whitespace-nowrap">
                 {period}
               </div>
             </div>
