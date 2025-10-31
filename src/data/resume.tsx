@@ -22,7 +22,9 @@ export const DATA = {
     "WebRTC",
     "Redis",
     "Docker",
-    "AWS"
+    "Azure",
+    "AWS",
+    ""
   ],
   navbar: [{ href: "/", icon: HomeIcon, label: "Home" }],
   contact: {
@@ -132,6 +134,33 @@ export const DATA = {
       ],
       image: "/color-palette.png",
     },
+    {
+      title: "Vault",
+      href:"https://github.com/Acid-OP/Vault",
+      dates: "Oct 2025 - Nov 2025",
+      active: true,
+      description:
+        "An exchange platform being built from scratch with focus on speed, reliability, and scalable architecture. Currently under development.",
+      technologies: [
+        "Next.js",
+        "TypeScript",
+        "Node.js",
+        "Redis (Pub/Sub, Queues, Caching)",
+        "Shadcn",
+        "TailwindCSS",
+        "WebSocket",
+        "Docker",
+        "NextAuth"
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "",
+          icon: <Globe className="size-3" />,
+        },
+      ],
+      image: "/exchange.png",
+    },
      {
       title: "Second Brain",
       href: "https://secondbrain-hazel.vercel.app/",
@@ -158,6 +187,29 @@ export const DATA = {
         },
       ],
       image: "/brain.png",
+    },
+       {
+      title: "Promptly",
+      href: "https://github.com/Acid-OP/Promptly",
+      dates: "Jan 2025 - March 2025",
+      active: true,
+      description:
+        "Made my own Cursor inside a custom shell, an AI coding terminal that builds and edits projects from natural language.",
+      technologies: [
+        "Python",
+        "Shell",
+        "Docker",
+        "Regex",
+        "Gemini-API",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "",
+          icon: <Globe className="size-3" />,
+        },
+      ],
+      image: "/promptly.png",
     },
   ],
 } as const;

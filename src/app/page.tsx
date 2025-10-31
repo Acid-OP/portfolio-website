@@ -107,6 +107,30 @@ export default function Page() {
                 links={DATA.projects[1]?.links}
               />
             </BlurFade>
+
+            <BlurFade delay={BLUR_FADE_DELAY * 12 + 0.05}>
+              <ProjectCard
+                href={DATA.projects[2]?.href}
+                title={DATA.projects[2]?.title}
+                description={DATA.projects[2]?.description}
+                dates={DATA.projects[2]?.dates}
+                tags={DATA.projects[2]?.technologies}
+                image={DATA.projects[2]?.image}
+                links={DATA.projects[2]?.links}
+              />
+            </BlurFade>
+
+            <BlurFade delay={BLUR_FADE_DELAY * 12 + 0.05}>
+              <ProjectCard
+                href={DATA.projects[3]?.href}
+                title={DATA.projects[3]?.title}
+                description={DATA.projects[3]?.description}
+                dates={DATA.projects[3]?.dates}
+                tags={DATA.projects[3]?.technologies}
+                image={DATA.projects[3]?.image}
+                links={DATA.projects[3]?.links}
+              />
+            </BlurFade>
           </div>
         </div>
       </section>
