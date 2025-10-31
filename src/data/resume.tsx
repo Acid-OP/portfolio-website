@@ -120,10 +120,10 @@ export const DATA = {
         "Node.js",
         "WebRTC",
         "Shadcn",
-        "TailwindCSS",
         "Websocket",
         "Docker",
-        "Nextauth"
+        "Nextauth",
+        "Azure"
       ],
       links: [
         {
@@ -146,7 +146,7 @@ export const DATA = {
         "TypeScript",
         "Node.js",
         "Redis (Pub/Sub, Queues, Caching)",
-        "Shadcn",
+        "TimeSeries DB",
         "TailwindCSS",
         "WebSocket",
         "Docker",

@@ -78,7 +78,7 @@ export default function Page() {
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="">
                 <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
-                 What I{"'"}ve Built
+                 Stuff I built while the world slept
                 </h2>
               </div>
             </div>
