@@ -23,8 +23,7 @@ export const DATA = {
     "Redis",
     "Docker",
     "Azure",
-    "AWS",
-    ""
+    "AWS"
   ],
   navbar: [{ href: "/", icon: HomeIcon, label: "Home" }],
   contact: {
