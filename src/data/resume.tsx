@@ -63,6 +63,16 @@ export const DATA = {
 
   work: [
     {
+      company: "Paasa (YC S24)",
+      href: "https://www.paasa.co/",
+      badges: [],
+      location: "Remote",
+      title: "SWE Intern",
+      logoUrl: "/paasa.jpeg",
+      start: "Nov 2025",
+      end: "Present"      
+    },
+    {
       company: "High Vision Technologies LLP",
       href: "https://hvtllp.com/",
       badges: [],
@@ -95,6 +105,7 @@ export const DATA = {
       end: "Present",
     },
   ],
+
   education: [
     {
       school: "Delhi Technological University",
