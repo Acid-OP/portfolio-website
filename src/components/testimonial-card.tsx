@@ -49,7 +49,7 @@ export function TestimonialCard({
 
       {/* Quote Text */}
       <p className="text-sm text-muted-foreground leading-relaxed mb-6 relative z-10">
-        "{quote}"
+        &ldquo;{quote}&rdquo;
       </p>
 
       {/* Author Info */}

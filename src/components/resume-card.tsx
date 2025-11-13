@@ -44,9 +44,9 @@ export const ResumeCard = ({
       className="block cursor-pointer"
       onClick={handleClick}
     >
-      <Card className="flex items-start transition-all duration-300 hover:shadow-md border-border group overflow-hidden p-4">
-        <div className="flex-none mr-4 mt-1">
-          <Avatar className="size-12 bg-muted">
+      <Card className="flex items-start transition-all duration-300 hover:shadow-sm hover:bg-accent/50 border-border group overflow-hidden p-3 rounded-lg">
+        <div className="flex-none mr-3 mt-0.5">
+          <Avatar className="size-11 bg-muted">
             <AvatarImage
               src={logoUrl}
               alt={altText}
@@ -55,10 +55,10 @@ export const ResumeCard = ({
             <AvatarFallback>{altText[0]}</AvatarFallback>
           </Avatar>
         </div>
-        <div className="flex-grow flex flex-col justify-center min-h-[3rem]">
-          <CardHeader className="p-0 space-y-1">
+        <div className="flex-grow flex flex-col justify-center min-h-[2.75rem]">
+          <CardHeader className="p-0 space-y-0.5">
             <div className="flex items-center justify-between gap-x-2 text-base">
-              <h3 className="inline-flex items-center gap-x-1 font-semibold leading-none text-xs sm:text-sm">
+              <h3 className="inline-flex items-center gap-x-1 font-semibold leading-snug text-xs sm:text-sm">
                 {title}
                 {badges && (
                   <span className="inline-flex gap-x-1">
@@ -84,7 +84,7 @@ export const ResumeCard = ({
                 {period}
               </div>
             </div>
-            {subtitle && <div className="font-sans text-xs text-muted-foreground mt-1">{subtitle}</div>}
+            {subtitle && <div className="font-sans text-xs text-muted-foreground leading-snug">{subtitle}</div>}
           </CardHeader>
           {description && (
             <motion.div

@@ -4,7 +4,7 @@ import ScrollReveal from "@/components/scroll-reveal";
 import { ProjectCard } from "@/components/project-card";
 import { ResumeCard } from "@/components/resume-card";
 import { TestimonialCard } from "@/components/testimonial-card";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { DATA } from "@/data/resume";
 import Markdown from "react-markdown";
@@ -13,9 +13,9 @@ const BLUR_FADE_DELAY = 0.01;
 
 export default function Page() {
   return (
-    <main className="flex flex-col min-h-[100dvh] space-y-8">
+    <main className="flex flex-col min-h-[100dvh] space-y-6">
       <section id="hero" className="pt-8">
-        <div className="mx-auto w-full max-w-2xl space-y-6">
+        <div className="mx-auto w-full max-w-2xl space-y-4">
           <div className="gap-4 flex justify-between items-center">
             <div className="flex-col flex flex-1 space-y-3">
               <BlurFadeText
@@ -39,7 +39,7 @@ export default function Page() {
         </div>
       </section>
       <ScrollReveal>
-        <section id="about" className="space-y-3">
+        <section id="about" className="space-y-2">
           <BlurFade delay={BLUR_FADE_DELAY * 3}>
             <h2 className="text-xl font-bold">About</h2>
           </BlurFade>
@@ -52,7 +52,7 @@ export default function Page() {
       </ScrollReveal>
       <ScrollReveal delay={50}>
         <section id="work">
-          <div className="flex min-h-0 flex-col gap-y-3">
+          <div className="flex min-h-0 flex-col gap-y-1.5">
             <BlurFade delay={BLUR_FADE_DELAY * 5}>
               <h2 className="text-xl font-bold">Work Experience</h2>
             </BlurFade>
@@ -181,7 +181,7 @@ export default function Page() {
       </ScrollReveal>
       <ScrollReveal delay={200}>
         <section id="education">
-          <div className="flex min-h-0 flex-col gap-y-3">
+          <div className="flex min-h-0 flex-col gap-y-1.5">
             <BlurFade delay={BLUR_FADE_DELAY * 7}>
               <h2 className="text-xl font-bold">Education</h2>
             </BlurFade>
@@ -212,7 +212,7 @@ export default function Page() {
             </BlurFade>
             <BlurFade delay={BLUR_FADE_DELAY * 15}>
               <p className="text-center text-sm text-muted-foreground max-w-md mx-auto">
-                Let's build something great together. Feel free to reach out for collaborations or just a friendly chat.
+                Let&apos;s build something great together. Feel free to reach out for collaborations or just a friendly chat.
               </p>
             </BlurFade>
             <BlurFade delay={BLUR_FADE_DELAY * 16}>

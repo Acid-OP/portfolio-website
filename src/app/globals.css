@@ -193,7 +193,26 @@
     transition: opacity 0.3s ease;
   }
 
-  /* Card hover shadow enhancement */
+  /* Card hover effects */
+  .hover\:bg-accent\/50:hover {
+    background-color: hsl(var(--accent) / 0.5);
+  }
+
+  .hover\:shadow-sm:hover {
+    box-shadow: 0 2px 8px -1px rgba(0, 0, 0, 0.06);
+  }
+
+  .dark .hover\:shadow-sm:hover {
+    box-shadow: 0 2px 8px -1px rgba(255, 255, 255, 0.06);
+  }
+
+  /* Smooth card transitions */
+  [class*="Card"] {
+    transition-property: background-color, box-shadow, transform;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+  }
+
   .hover\:shadow-md:hover {
     box-shadow: 0 4px 12px -2px rgba(0, 0, 0, 0.08);
   }
