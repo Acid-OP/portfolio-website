@@ -46,7 +46,7 @@ export function TestimonialCard({
           src={image}
           alt="Client testimonial"
           fill
-          className="object-cover group-hover:scale-105 transition-transform duration-500"
+          className="object-cover scale-100 group-hover:scale-110 transition-transform duration-500"
           sizes="(max-width: 768px) 90vw, 400px"
         />
         {/* Subtle overlay on hover */}
