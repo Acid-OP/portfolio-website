@@ -69,10 +69,145 @@
   @layer base {
     * {
       @apply border-border;
+      cursor: none !important;
     }
     body {
       @apply bg-background text-foreground;
+      cursor: none !important;
     }
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+
+  /* Custom Cursor Styles */
+  .custom-cursor {
+    position: fixed;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #000;
+    pointer-events: none;
+    z-index: 9999;
+    transition: transform 0.08s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.5);
+    will-change: transform;
+  }
+
+  .dark .custom-cursor {
+    background-color: #fff;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.5);
+  }
+
+  /* Theme Transition Effect */
+  .theme-transition-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9998;
+    background: radial-gradient(circle at top right, var(--background) 0%, transparent 0%);
+    opacity: 0;
+    transition: opacity 0.1s ease;
+  }
+
+  .theme-transition-overlay.active {
+    opacity: 1;
+    background: radial-gradient(circle at top right, var(--background) 150%, transparent 150%);
+    transition: background 0.7s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Scroll Reveal Animations */
+  .scroll-reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+  }
+
+  .scroll-reveal-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Smooth scrolling for anchor links */
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+
+  /* Hover effects for interactive elements */
+  a, button, [role="button"] {
+    transition: all 0.2s ease;
+  }
+
+  a:hover, button:hover, [role="button"]:hover {
+    transform: translateY(-1px);
+  }
+
+  /* Subtle parallax effect on scroll */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+
+  /* Typography Improvements */
+  h1, h2, h3, h4, h5, h6 {
+    letter-spacing: -0.02em;
+  }
+
+  /* Selection styling */
+  ::selection {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  .dark ::selection {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  /* Better focus states */
+  *:focus-visible {
+    outline: 2px solid rgba(0, 0, 0, 0.5);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  .dark *:focus-visible {
+    outline-color: rgba(255, 255, 255, 0.5);
+  }
+
+  /* Smooth image loading */
+  img {
+    transition: opacity 0.3s ease;
+  }
+
+  /* Card hover shadow enhancement */
+  .hover\:shadow-md:hover {
+    box-shadow: 0 4px 12px -2px rgba(0, 0, 0, 0.08);
+  }
+
+  .dark .hover\:shadow-md:hover {
+    box-shadow: 0 4px 12px -2px rgba(255, 255, 255, 0.08);
+  }
+
+  .hover\:shadow-lg:hover {
+    box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.1);
+  }
+
+  .dark .hover\:shadow-lg:hover {
+    box-shadow: 0 10px 30px -5px rgba(255, 255, 255, 0.1);
   }
 
   h3 code {

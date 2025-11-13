@@ -47,13 +47,13 @@ export function ProjectCard({
   return (
   <MagicCard 
     className={cn(
-      "cursor-pointer rounded-lg dark:shadow-2xl w-[100%] max-sm:w-full h-[350px] border-none !bg-transparent",
+      "cursor-pointer rounded-lg dark:shadow-2xl w-[100%] max-sm:w-full h-[350px] border-none !bg-transparent hover:scale-[1.02] transition-all duration-300",
       className
     )} 
     gradientColor={`${isDarkMode ? '#262626' : 'rgba(197, 241, 241, 0.4)'}`}
   >
     <ShineBorder
-      className="border h-full w-full relative rounded-lg flex flex-col justify-start items-start md:shadow-xl !bg-transparent !pointer-events-none p-5" 
+      className="border h-full w-full relative rounded-lg flex flex-col justify-start items-start md:shadow-xl !bg-transparent !pointer-events-none p-5 group" 
       color={["#FF9933", "#FFFFFF", "#138808"]}
     >
       <div>
@@ -85,7 +85,7 @@ export function ProjectCard({
         <Link 
           href={href || link || "#"} 
           target='_blank' 
-          className="block"
+          className="block group-hover:translate-x-1 transition-transform duration-200"
         >
           <h1 className="text-xl text-black dark:text-white font-bold tracking-tight text-start whitespace-nowrap">
             {title}

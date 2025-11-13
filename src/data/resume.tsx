@@ -222,4 +222,27 @@ export const DATA = {
       image: "/promptly.png",
     },
   ],
+  testimonials: [
+    {
+      quote: "Working with Gaurav was a game-changer for our project. His technical expertise and problem-solving skills are exceptional. He delivered beyond our expectations.",
+      author: "John Doe",
+      role: "CTO",
+      company: "Tech Startup",
+      rating: 5,
+    },
+    {
+      quote: "Gaurav's ability to understand complex requirements and translate them into elegant solutions is remarkable. Highly recommend for any development work.",
+      author: "Sarah Johnson",
+      role: "Product Manager",
+      company: "SaaS Company",
+      rating: 5,
+    },
+    {
+      quote: "Professional, responsive, and incredibly skilled. Gaurav helped us build a scalable solution that exceeded our performance goals.",
+      author: "Mike Chen",
+      role: "Founder",
+      company: "E-commerce Platform",
+      rating: 5,
+    },
+  ],
 } as const;

@@ -44,9 +44,9 @@ export const ResumeCard = ({
       className="block cursor-pointer"
       onClick={handleClick}
     >
-      <Card className="flex">
-        <div className="flex-none">
-          <Avatar className="size-12 m-auto  bg-white dark:bg-black">
+      <Card className="flex items-start transition-all duration-300 hover:shadow-md border-border group overflow-hidden p-4">
+        <div className="flex-none mr-4 mt-1">
+          <Avatar className="size-12 bg-muted">
             <AvatarImage
               src={logoUrl}
               alt={altText}
@@ -55,10 +55,10 @@ export const ResumeCard = ({
             <AvatarFallback>{altText[0]}</AvatarFallback>
           </Avatar>
         </div>
-        <div className="flex-grow ml-4 items-center flex-col group">
-          <CardHeader>
+        <div className="flex-grow flex flex-col justify-center min-h-[3rem]">
+          <CardHeader className="p-0 space-y-1">
             <div className="flex items-center justify-between gap-x-2 text-base">
-              <h3 className="inline-flex items-center justify-center font-semibold leading-none text-xs sm:text-sm">
+              <h3 className="inline-flex items-center gap-x-1 font-semibold leading-none text-xs sm:text-sm">
                 {title}
                 {badges && (
                   <span className="inline-flex gap-x-1">
@@ -84,21 +84,20 @@ export const ResumeCard = ({
                 {period}
               </div>
             </div>
-            {subtitle && <div className="font-sans text-xs">{subtitle}</div>}
+            {subtitle && <div className="font-sans text-xs text-muted-foreground mt-1">{subtitle}</div>}
           </CardHeader>
           {description && (
             <motion.div
               initial={{ opacity: 0, height: 0 }}
               animate={{
                 opacity: isExpanded ? 1 : 0,
-
                 height: isExpanded ? "auto" : 0,
               }}
               transition={{
                 duration: 0.7,
                 ease: [0.16, 1, 0.3, 1],
               }}
-              className="mt-2 text-xs sm:text-sm"
+              className="mt-3 text-xs sm:text-sm text-muted-foreground"
             >
               {description}
             </motion.div>
