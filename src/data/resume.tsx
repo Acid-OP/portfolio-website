@@ -224,14 +224,14 @@ export const DATA = {
   ],
   testimonials: [
     {
-      quote: "Working with Gaurav was a game-changer for our project. His technical expertise and problem-solving skills are exceptional. He delivered beyond our expectations.",
+      quote: "Working with Gaurav was a game-changer for our project. His technical expertise and problem-solving skills are exceptional.",
       author: "John Doe",
       role: "CTO",
       company: "Tech Startup",
       rating: 5,
     },
     {
-      quote: "Gaurav's ability to understand complex requirements and translate them into elegant solutions is remarkable. Highly recommend for any development work.",
+      quote: "Gaurav's ability to understand complex requirements and translate them into elegant solutions is remarkable.",
       author: "Sarah Johnson",
       role: "Product Manager",
       company: "SaaS Company",
@@ -242,6 +242,20 @@ export const DATA = {
       author: "Mike Chen",
       role: "Founder",
       company: "E-commerce Platform",
+      rating: 5,
+    },
+    {
+      quote: "Incredible attention to detail and a true passion for building great products. Would work with him again in a heartbeat.",
+      author: "Emma Wilson",
+      role: "Design Lead",
+      company: "Creative Agency",
+      rating: 5,
+    },
+    {
+      quote: "Fast turnaround, clean code, and excellent communication throughout. Exactly what we needed for our startup.",
+      author: "Alex Rodriguez",
+      role: "CEO",
+      company: "FinTech Startup",
       rating: 5,
     },
   ],

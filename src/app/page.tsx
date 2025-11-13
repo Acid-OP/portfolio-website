@@ -52,7 +52,7 @@ export default function Page() {
       </ScrollReveal>
       <ScrollReveal delay={50}>
         <section id="work">
-          <div className="flex min-h-0 flex-col gap-y-1.5">
+          <div className="flex min-h-0 flex-col gap-y-1">
             <BlurFade delay={BLUR_FADE_DELAY * 5}>
               <h2 className="text-xl font-bold">Work Experience</h2>
             </BlurFade>
@@ -156,14 +156,9 @@ export default function Page() {
         <section id="testimonials">
           <div className="flex min-h-0 flex-col gap-y-4">
             <BlurFade delay={BLUR_FADE_DELAY * 17}>
-              <h2 className="text-xl font-bold text-center">Client Testimonials</h2>
+              <h2 className="text-2xl font-bold text-center mb-2">Client Testimonials</h2>
             </BlurFade>
-            <BlurFade delay={BLUR_FADE_DELAY * 18}>
-              <p className="text-center text-sm text-muted-foreground max-w-md mx-auto">
-                What people say about working with me
-              </p>
-            </BlurFade>
-            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 mt-4">
+            <div className="testimonials-grid mt-6">
               {DATA.testimonials.map((testimonial, id) => (
                 <BlurFade key={testimonial.author} delay={BLUR_FADE_DELAY * 19 + id * 0.05}>
                   <TestimonialCard
@@ -172,6 +167,7 @@ export default function Page() {
                     role={testimonial.role}
                     company={testimonial.company}
                     rating={testimonial.rating}
+                    index={id}
                   />
                 </BlurFade>
               ))}
@@ -181,7 +177,7 @@ export default function Page() {
       </ScrollReveal>
       <ScrollReveal delay={200}>
         <section id="education">
-          <div className="flex min-h-0 flex-col gap-y-1.5">
+          <div className="flex min-h-0 flex-col gap-y-1">
             <BlurFade delay={BLUR_FADE_DELAY * 7}>
               <h2 className="text-xl font-bold">Education</h2>
             </BlurFade>
@@ -216,31 +212,26 @@ export default function Page() {
               </p>
             </BlurFade>
             <BlurFade delay={BLUR_FADE_DELAY * 16}>
-              <div className="flex flex-wrap gap-3 justify-center items-center mt-4">
-                {Object.entries(DATA.contact.social).map(([name, social]) => (
-                  social.navbar && (
-                    <a
-                      key={name}
-                      href={social.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 px-4 py-2 rounded-lg border border-border hover:bg-accent transition-all duration-200 hover:scale-105"
-                    >
-                      <social.icon className="size-4" />
-                      <span className="text-sm font-medium">{social.name}</span>
-                    </a>
-                  )
-                ))}
+              <div className="flex flex-wrap gap-4 justify-center items-center mt-6">
                 <a
                   href="https://cal.com/gaurav-kapur/30min"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-4 py-2 rounded-lg bg-black dark:bg-white text-white dark:text-black hover:scale-105 transition-all duration-200 font-medium text-sm"
+                  className="flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-500 dark:to-indigo-500 text-white hover:scale-105 hover:shadow-lg transition-all duration-300 font-semibold text-sm shadow-md"
                 >
-                  <svg className="size-4" fill="currentColor" viewBox="0 0 24 24">
+                  <svg className="size-5" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zM9 14H7v-2h2v2zm4 0h-2v-2h2v2zm4 0h-2v-2h2v2zm-8 4H7v-2h2v2zm4 0h-2v-2h2v2zm4 0h-2v-2h2v2z"/>
                   </svg>
                   Schedule a Call
+                </a>
+                <a
+                  href={DATA.contact.social.GitHub.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-6 py-3 rounded-xl border-2 border-border hover:bg-accent transition-all duration-300 hover:scale-105 font-medium text-sm"
+                >
+                  <DATA.contact.social.GitHub.icon className="size-5" />
+                  GitHub
                 </a>
               </div>
             </BlurFade>
