@@ -36,7 +36,7 @@ export function TestimonialCard({
       }}
     >
       <div 
-        className="relative border border-gray-300 dark:border-gray-600 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 bg-white dark:bg-black"
+        className="relative border border-gray-900/30 dark:border-gray-100/30 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 bg-white dark:bg-black"
         style={{
           width: size.width,
           height: size.height,

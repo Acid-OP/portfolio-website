@@ -7,7 +7,7 @@ export const DATA = {
   description:
     "i build digital experiences that tell a story.",
   summary:
-    "i build, break, and rebuild — that’s how i learn. i like stacking small wins that compound over time. for me, the process is the fun part.",
+    "i build, break, and rebuild. that's how i learn. i like stacking small wins that compound over time. for me, the process is the fun part.",
   avatarUrl: "/madara.jpg",
   skills: [
     "JavaScript",
