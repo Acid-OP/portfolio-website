@@ -52,7 +52,7 @@ export default function Page() {
       </ScrollReveal>
       <ScrollReveal delay={50}>
         <section id="work">
-          <div className="flex min-h-0 flex-col gap-y-1">
+          <div className="flex min-h-0 flex-col gap-y-0">
             <BlurFade delay={BLUR_FADE_DELAY * 5}>
               <h2 className="text-xl font-bold">Work Experience</h2>
             </BlurFade>
@@ -153,21 +153,20 @@ export default function Page() {
         </section>
       </ScrollReveal>
       <ScrollReveal delay={175}>
-        <section id="testimonials">
+        <section id="testimonials" className="mt-12 mb-12">
           <div className="flex min-h-0 flex-col gap-y-4">
             <BlurFade delay={BLUR_FADE_DELAY * 17}>
-              <h2 className="text-2xl font-bold text-center mb-2">Client Testimonials</h2>
+              <h2 className="text-2xl font-bold text-center mb-8">Client Testimonials</h2>
             </BlurFade>
-            <div className="testimonials-grid mt-6">
+            <div className="relative w-full min-h-[550px] md:min-h-[480px] max-w-3xl mx-auto px-8">
               {DATA.testimonials.map((testimonial, id) => (
-                <BlurFade key={testimonial.author} delay={BLUR_FADE_DELAY * 19 + id * 0.05}>
+                <BlurFade key={id} delay={BLUR_FADE_DELAY * 19 + id * 0.05}>
                   <TestimonialCard
-                    quote={testimonial.quote}
-                    author={testimonial.author}
-                    role={testimonial.role}
-                    company={testimonial.company}
-                    rating={testimonial.rating}
-                    index={id}
+                    image={testimonial.image}
+                    rotation={testimonial.rotation}
+                    position={testimonial.position}
+                    size={testimonial.size}
+                    zIndex={testimonial.zIndex}
                   />
                 </BlurFade>
               ))}
@@ -223,15 +222,6 @@ export default function Page() {
                     <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zM9 14H7v-2h2v2zm4 0h-2v-2h2v2zm4 0h-2v-2h2v2zm-8 4H7v-2h2v2zm4 0h-2v-2h2v2zm4 0h-2v-2h2v2z"/>
                   </svg>
                   Schedule a Call
-                </a>
-                <a
-                  href={DATA.contact.social.GitHub.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-6 py-3 rounded-xl border-2 border-border hover:bg-accent transition-all duration-300 hover:scale-105 font-medium text-sm"
-                >
-                  <DATA.contact.social.GitHub.icon className="size-5" />
-                  GitHub
                 </a>
               </div>
             </BlurFade>
