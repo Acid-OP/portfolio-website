@@ -2,7 +2,10 @@ import Navbar from "@/components/navbar";
 import { ThemeProvider } from "@/components/theme-provider";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import CustomCursor from "@/components/custom-cursor";
+import { CursorFollower } from "@/components/cursor-follower";
+import { QuickContact } from "@/components/quick-contact";
 import ScrollToTop from "@/components/scroll-to-top";
+import { ScrollToTopOnMount } from "@/components/scroll-to-top-on-mount";
 import ThemeTransition from "@/components/theme-transition";
 import { DATA } from "@/data/resume";
 import { cn } from "@/lib/utils";
@@ -69,7 +72,10 @@ export default function RootLayout({
       >
         <ThemeProvider attribute="class" defaultTheme="light">
           <TooltipProvider delayDuration={0}>
+            <ScrollToTopOnMount />
             <CustomCursor />
+            <CursorFollower />
+            <QuickContact />
             <ThemeTransition />
             {children}
             <Navbar />

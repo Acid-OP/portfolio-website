@@ -1,10 +1,13 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { ChevronUp } from "lucide-react";
+import { ArrowUp } from "lucide-react";
+import { Avatar, AvatarImage } from "@/components/ui/avatar";
+import { DATA } from "@/data/resume";
 
 export default function ScrollToTop() {
   const [isVisible, setIsVisible] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
 
   useEffect(() => {
     const toggleVisibility = () => {
@@ -34,10 +37,26 @@ export default function ScrollToTop() {
       {isVisible && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-8 right-8 z-50 p-3 rounded-full bg-black dark:bg-white text-white dark:text-black shadow-lg hover:scale-110 transition-all duration-300 hover:shadow-xl"
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+          className="fixed bottom-8 right-8 z-50 group"
           aria-label="Scroll to top"
         >
-          <ChevronUp className="w-5 h-5" />
+          <div className="relative">
+            {/* Avatar */}
+            <Avatar className="size-14 border-2 border-foreground/20 hover:border-foreground/40 shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-110 ring-2 ring-background">
+              <AvatarImage alt={DATA.name} src={DATA.avatarUrl} />
+            </Avatar>
+            
+            {/* Arrow overlay on hover */}
+            <div 
+              className={`absolute inset-0 flex items-center justify-center bg-black/70 dark:bg-white/70 rounded-full transition-all duration-300 ${
+                isHovered ? 'opacity-100 scale-100' : 'opacity-0 scale-90'
+              }`}
+            >
+              <ArrowUp className="w-6 h-6 text-white dark:text-black animate-bounce" />
+            </div>
+          </div>
         </button>
       )}
     </>

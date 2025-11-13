@@ -71,32 +71,41 @@
       @apply border-border;
       cursor: none !important;
     }
+    html,
     body {
       @apply bg-background text-foreground;
       cursor: none !important;
+      background-image: radial-gradient(circle at 1px 1px, hsl(var(--foreground) / 0.03) 1px, transparent 0);
+      background-size: 40px 40px;
+    }
+    .dark body {
+      background-image: radial-gradient(circle at 1px 1px, hsl(var(--foreground) / 0.05) 1px, transparent 0);
     }
     html {
       scroll-behavior: smooth;
+    }
+    
+    /* Force hide default cursor everywhere */
+    *,
+    *::before,
+    *::after {
+      cursor: none !important;
+    }
+    
+    a, button, input, textarea, select, [role="button"] {
+      cursor: none !important;
     }
   }
 
   /* Custom Cursor Styles */
   .custom-cursor {
     position: fixed;
-    width: 8px;
-    height: 8px;
+    width: 12px;
+    height: 12px;
     border-radius: 50%;
-    background-color: #000;
     pointer-events: none;
     z-index: 9999;
-    transition: transform 0.08s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.5);
-    will-change: transform;
-  }
-
-  .dark .custom-cursor {
-    background-color: #fff;
-    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.5);
+    will-change: transform, background-color;
   }
 
   /* Theme Transition Effect */

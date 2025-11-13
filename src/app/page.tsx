@@ -4,6 +4,7 @@ import ScrollReveal from "@/components/scroll-reveal";
 import { ProjectCard } from "@/components/project-card";
 import { ResumeCard } from "@/components/resume-card";
 import { TestimonialCard } from "@/components/testimonial-card";
+import { Footer } from "@/components/footer";
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { DATA } from "@/data/resume";
@@ -20,7 +21,7 @@ export default function Page() {
             <div className="flex-col flex flex-1 space-y-3">
               <BlurFadeText
                 delay={BLUR_FADE_DELAY}
-                className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none"
+                className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none bg-gradient-to-br from-foreground via-foreground to-foreground/70 bg-clip-text text-transparent"
                 yOffset={8}
                 text={`Sup, ${DATA.name} here`}
               />
@@ -31,7 +32,7 @@ export default function Page() {
               />
             </div>
             <BlurFade delay={BLUR_FADE_DELAY}>
-              <Avatar className="size-28 border hover:scale-105 transition-transform duration-300">
+              <Avatar className="size-28 border-2 border-blue-500/30 dark:border-blue-400/40 hover:scale-105 transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/30 dark:hover:shadow-blue-400/20 hover:border-blue-500/60 dark:hover:border-blue-400/60">
                 <AvatarImage alt={DATA.name} src={DATA.avatarUrl} />
               </Avatar>
             </BlurFade>
@@ -39,9 +40,11 @@ export default function Page() {
         </div>
       </section>
       <ScrollReveal>
-        <section id="about" className="space-y-2">
+        <section id="about" className="space-y-3">
           <BlurFade delay={BLUR_FADE_DELAY * 3}>
-            <h2 className="text-xl font-bold">About</h2>
+            <h2 className="text-xl font-bold bg-gradient-to-r from-foreground to-foreground/60 bg-clip-text text-transparent">
+              About
+            </h2>
           </BlurFade>
           <BlurFade delay={BLUR_FADE_DELAY * 4}>
             <Markdown className="prose max-w-full text-pretty font-sans text-sm text-muted-foreground dark:prose-invert leading-relaxed">
@@ -54,7 +57,9 @@ export default function Page() {
         <section id="work">
           <div className="flex min-h-0 flex-col gap-y-0">
             <BlurFade delay={BLUR_FADE_DELAY * 5}>
-              <h2 className="text-xl font-bold">Work Experience</h2>
+              <h2 className="text-xl font-bold mb-4 bg-gradient-to-r from-foreground to-foreground/60 bg-clip-text text-transparent">
+                Work Experience
+              </h2>
             </BlurFade>
             {DATA.work.map((work, id) => (
               <BlurFade key={work.company} delay={BLUR_FADE_DELAY * 6 + id * 0.05}>
@@ -140,12 +145,16 @@ export default function Page() {
         <section id="skills">
           <div className="flex min-h-0 flex-col gap-y-4">
             <BlurFade delay={BLUR_FADE_DELAY * 9}>
-              <h2 className="text-xl font-bold text-center">Skills</h2>
+              <h2 className="text-xl font-bold text-center bg-gradient-to-r from-foreground to-foreground/60 bg-clip-text text-transparent">
+                Skills
+              </h2>
             </BlurFade>
             <div className="flex flex-wrap gap-2 justify-center">
               {DATA.skills.map((skill, id) => (
                 <BlurFade key={skill} delay={BLUR_FADE_DELAY * 10 + id * 0.05}>
-                  <Badge variant="subtle" className="hover:scale-105 transition-transform">{skill}</Badge>
+                  <Badge variant="subtle" className="hover:scale-105 transition-transform">
+                    {skill}
+                  </Badge>
                 </BlurFade>
               ))}
             </div>
@@ -156,7 +165,12 @@ export default function Page() {
         <section id="testimonials" className="mt-12 mb-12">
           <div className="flex min-h-0 flex-col gap-y-4">
             <BlurFade delay={BLUR_FADE_DELAY * 17}>
-              <h2 className="text-2xl font-bold text-center mb-8">Client Testimonials</h2>
+              <div className="text-center mb-8">
+                <h2 className="text-2xl font-bold mb-2 bg-gradient-to-r from-foreground to-foreground/60 bg-clip-text text-transparent">
+                  Client Testimonials
+                </h2>
+                <p className="text-sm text-muted-foreground">What people say about working with me</p>
+              </div>
             </BlurFade>
             <div className="relative w-full min-h-[550px] md:min-h-[480px] max-w-3xl mx-auto px-8">
               {DATA.testimonials.map((testimonial, id) => (
@@ -174,11 +188,13 @@ export default function Page() {
           </div>
         </section>
       </ScrollReveal>
-      <ScrollReveal delay={200}>
+      {/* <ScrollReveal delay={200}>
         <section id="education">
           <div className="flex min-h-0 flex-col gap-y-1">
             <BlurFade delay={BLUR_FADE_DELAY * 7}>
-              <h2 className="text-xl font-bold">Education</h2>
+              <h2 className="text-xl font-bold mb-4 bg-gradient-to-r from-foreground to-foreground/60 bg-clip-text text-transparent">
+                Education
+              </h2>
             </BlurFade>
             {DATA.education.map((education, id) => (
               <BlurFade
@@ -198,12 +214,14 @@ export default function Page() {
             ))}
           </div>
         </section>
-      </ScrollReveal>
+      </ScrollReveal> */}
       <ScrollReveal delay={250}>
         <section id="contact" className="pb-12">
-          <div className="flex min-h-0 flex-col gap-y-4">
+          <div className="flex min-h-0 flex-col gap-y-6">
             <BlurFade delay={BLUR_FADE_DELAY * 14}>
-              <h2 className="text-xl font-bold text-center">Connect With Me</h2>
+              <h2 className="text-2xl font-bold text-center bg-gradient-to-r from-foreground to-foreground/60 bg-clip-text text-transparent">
+                Connect With Me
+              </h2>
             </BlurFade>
             <BlurFade delay={BLUR_FADE_DELAY * 15}>
               <p className="text-center text-sm text-muted-foreground max-w-md mx-auto">
@@ -228,6 +246,7 @@ export default function Page() {
           </div>
         </section>
       </ScrollReveal>
+      <Footer />
     </main>
   );
 }
