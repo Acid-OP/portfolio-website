@@ -67,20 +67,24 @@ export const DATA = {
       href: "https://www.paasa.co/",
       badges: [],
       location: "Remote",
-      title: "SWE Intern",
+      title: "Full Stack Engineer",
       logoUrl: "/paasa.jpeg",
-      start: "Nov 2025",
-      end: "Present"      
+      start: "Sep 2025",
+      end: "Dec 2025",
+      description:
+        "Shipped UCITS screening platform from inception to production on Fly.io, architecting a scalable server-side solution managing 2,940+ UCITS-compliant investment instruments with advanced filtering and real-time data processing. Engineered an AI-powered portfolio generation engine processing user quiz responses to deliver personalized investment recommendations; orchestrated an automated cron system dispatching weekly portfolio statements via email and WhatsApp, reducing manual outreach by 40%. Constructed server-side Next.js components with SSR architecture for production tools, including a global brokerage calculator and US estate tax calculator, increasing user engagement by 15%. Built automation pipelines integrating Strapi CMS, PostHog analytics, WATI, and Slack to streamline content publishing with SEO optimization, collaborating with marketing teams to synchronize user submissions across platforms.",
     },
     {
-      company: "High Vision Technologies LLP",
-      href: "https://hvtllp.com/",
-      badges: [],
+      company: "Suko",
+      href: "",
+      badges: ["Founding Member"],
       location: "Remote",
-      title: "Analyst",
+      title: "Backend Engineer & Founding Member",
       logoUrl: "/hvt.jpeg",
-      start: "May 2024",
-      end: "Aug 2024",
+      start: "Mar 2025",
+      end: "Aug 2025",
+      description:
+        "Architected backend infrastructure for an anonymous social platform enabling AI-generated memory scenes from user prompts using Node.js, Express, TypeScript, and Prisma with PostgreSQL; developed WebSocket infrastructure for real-time scene broadcasting to follower feeds and REST endpoints for the public explore page. Designed a worker-based pipeline bridging ML model outputs with backend services, integrating AWS S3 for avatar and scene image storage with Redis Cloud caching using ETag validation and conditional headers, improving asset delivery performance by 60%. Containerized backend services with Docker and launched CI/CD pipelines to Google Cloud Platform; mentored 2 junior developers on system architecture patterns, accelerating feature deployment velocity by 35%.",
     },
     {
       company: "ITSAT",
@@ -92,7 +96,7 @@ export const DATA = {
       start: "Aug 2023",
       end: "Nov 2023",
       description:
-        "Actively contributed to the development and architectural scaling of IATSAT’s official website, enhancing both design and system efficiency. Built UI components and managed backend tasks to improve user experience. Optimized deployment through containerization and collaborated closely with the team to shape the project’s design and performance with practical, impactful ideas.",
+        "Actively contributed to the development and architectural scaling of IATSAT's official website, enhancing both design and system efficiency. Built UI components and managed backend tasks to improve user experience. Optimized deployment through containerization and collaborated closely with the team to shape the project's design and performance with practical, impactful ideas.",
     },
     {
       company: "Freelancer",

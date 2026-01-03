@@ -8,11 +8,29 @@ export function CursorFollower() {
   const [position, setPosition] = useState(defaultPosition);
   const [targetPosition, setTargetPosition] = useState(defaultPosition);
   const [rotation, setRotation] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
   const canFollowRef = useRef(false);
   const isWaitingRef = useRef(false);
 
+  // Check if device is mobile/touch
+  useEffect(() => {
+    const checkMobile = () => {
+      const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+      const isSmallScreen = window.innerWidth < 768;
+      setIsMobile(isTouchDevice || isSmallScreen);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
   // Update target position on mouse move with delay
   useEffect(() => {
+    // Don't run on mobile
+    if (isMobile) return;
+
     let idleTimer: NodeJS.Timeout;
     let followTimer: NodeJS.Timeout;
 
@@ -50,10 +68,13 @@ export function CursorFollower() {
       clearTimeout(idleTimer);
       clearTimeout(followTimer);
     };
-  }, [defaultPosition]);
+  }, [defaultPosition, isMobile]);
 
   // Smooth follow animation
   useEffect(() => {
+    // Don't run on mobile
+    if (isMobile) return;
+
     const followSpeed = 2.5; // Pixels per frame - constant speed
     const minDistance = 50; // Minimum distance to maintain from cursor
     
@@ -96,7 +117,10 @@ export function CursorFollower() {
     });
 
     return () => cancelAnimationFrame(animationFrame);
-  }, [targetPosition]);
+  }, [targetPosition, isMobile]);
+
+  // Don't render on mobile
+  if (isMobile) return null;
 
   return (
     <div

@@ -32,7 +32,7 @@ export default function Page() {
               />
             </div>
             <BlurFade delay={BLUR_FADE_DELAY}>
-              <Avatar className="size-28 border-2 border-blue-500/30 dark:border-blue-400/40 hover:scale-105 transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/30 dark:hover:shadow-blue-400/20 hover:border-blue-500/60 dark:hover:border-blue-400/60">
+              <Avatar className="size-20 sm:size-24 md:size-28 border-2 border-blue-500/30 dark:border-blue-400/40 hover:scale-105 transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/30 dark:hover:shadow-blue-400/20 hover:border-blue-500/60 dark:hover:border-blue-400/60 flex-shrink-0">
                 <AvatarImage alt={DATA.name} src={DATA.avatarUrl} />
               </Avatar>
             </BlurFade>
@@ -53,7 +53,7 @@ export default function Page() {
           </BlurFade>
         </section>
       </ScrollReveal>
-      <ScrollReveal delay={50}>
+      {/* <ScrollReveal delay={50}>
         <section id="work">
           <div className="flex min-h-0 flex-col gap-y-0">
             <BlurFade delay={BLUR_FADE_DELAY * 5}>
@@ -76,7 +76,7 @@ export default function Page() {
             ))}
           </div>
         </section>
-      </ScrollReveal>
+      </ScrollReveal> */}
       <ScrollReveal delay={100}>
         <section id="projects">
           <div className="space-y-8 w-full py-6">
@@ -172,7 +172,7 @@ export default function Page() {
                 <p className="text-sm text-muted-foreground">What people say about working with me</p>
               </div>
             </BlurFade>
-            <div className="relative w-full min-h-[550px] md:min-h-[480px] max-w-3xl mx-auto px-8">
+            <div className="relative w-full min-h-[550px] md:min-h-[480px] max-w-3xl mx-auto px-4 md:px-8 flex flex-col md:block">
               {DATA.testimonials.map((testimonial, id) => (
                 <BlurFade key={id} delay={BLUR_FADE_DELAY * 19 + id * 0.05}>
                   <TestimonialCard
@@ -229,14 +229,14 @@ export default function Page() {
               </p>
             </BlurFade>
             <BlurFade delay={BLUR_FADE_DELAY * 16}>
-              <div className="flex flex-wrap gap-4 justify-center items-center mt-6">
+              <div className="flex flex-wrap gap-4 justify-center items-center mt-6 px-4">
                 <a
                   href="https://cal.com/gaurav-kapur/30min"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-500 dark:to-indigo-500 text-white hover:scale-105 hover:shadow-lg transition-all duration-300 font-semibold text-sm shadow-md"
+                  className="flex items-center gap-2 px-5 md:px-6 py-2.5 md:py-3 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-500 dark:to-indigo-500 text-white hover:scale-105 hover:shadow-lg transition-all duration-300 font-semibold text-xs md:text-sm shadow-md"
                 >
-                  <svg className="size-5" fill="currentColor" viewBox="0 0 24 24">
+                  <svg className="size-4 md:size-5" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zM9 14H7v-2h2v2zm4 0h-2v-2h2v2zm4 0h-2v-2h2v2zm-8 4H7v-2h2v2zm4 0h-2v-2h2v2zm4 0h-2v-2h2v2z"/>
                   </svg>
                   Schedule a Call

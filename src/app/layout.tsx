@@ -1,8 +1,8 @@
 import Navbar from "@/components/navbar";
 import { ThemeProvider } from "@/components/theme-provider";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import CustomCursor from "@/components/custom-cursor";
-import { CursorFollower } from "@/components/cursor-follower";
+import GojoSmallCursor from "@/components/gojo-cursor-small";
+import SmoothScroll from "@/components/smooth-scroll";
 import { QuickContact } from "@/components/quick-contact";
 import ScrollToTop from "@/components/scroll-to-top";
 import { ScrollToTopOnMount } from "@/components/scroll-to-top-on-mount";
@@ -73,8 +73,8 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="light">
           <TooltipProvider delayDuration={0}>
             <ScrollToTopOnMount />
-            <CustomCursor />
-            <CursorFollower />
+            <SmoothScroll />
+            <GojoSmallCursor />
             <QuickContact />
             <ThemeTransition />
             {children}

@@ -39,12 +39,12 @@ export default function ScrollToTop() {
           onClick={scrollToTop}
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
-          className="fixed bottom-8 right-8 z-50 group"
+          className="fixed bottom-4 right-4 md:bottom-8 md:right-8 z-50 group"
           aria-label="Scroll to top"
         >
           <div className="relative">
             {/* Avatar */}
-            <Avatar className="size-14 border-2 border-foreground/20 hover:border-foreground/40 shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-110 ring-2 ring-background">
+            <Avatar className="size-12 md:size-14 border-2 border-foreground/20 hover:border-foreground/40 shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-110 ring-2 ring-background">
               <AvatarImage alt={DATA.name} src={DATA.avatarUrl} />
             </Avatar>
             
@@ -54,7 +54,7 @@ export default function ScrollToTop() {
                 isHovered ? 'opacity-100 scale-100' : 'opacity-0 scale-90'
               }`}
             >
-              <ArrowUp className="w-6 h-6 text-white dark:text-black animate-bounce" />
+              <ArrowUp className="w-5 h-5 md:w-6 md:h-6 text-white dark:text-black animate-bounce" />
             </div>
           </div>
         </button>

@@ -69,12 +69,10 @@
   @layer base {
     * {
       @apply border-border;
-      cursor: none !important;
     }
     html,
     body {
       @apply bg-background text-foreground;
-      cursor: none !important;
       background-image: radial-gradient(circle at 1px 1px, hsl(var(--foreground) / 0.03) 1px, transparent 0);
       background-size: 40px 40px;
     }
@@ -82,30 +80,18 @@
       background-image: radial-gradient(circle at 1px 1px, hsl(var(--foreground) / 0.05) 1px, transparent 0);
     }
     html {
-      scroll-behavior: smooth;
+      scroll-behavior: auto;
     }
     
-    /* Force hide default cursor everywhere */
-    *,
-    *::before,
-    *::after {
-      cursor: none !important;
+    /* Hide default cursor only on desktop (non-touch devices) */
+    @media (hover: hover) and (pointer: fine) {
+      *,
+      *::before,
+      *::after,
+      a, button, input, textarea, select, [role="button"] {
+        cursor: none !important;
+      }
     }
-    
-    a, button, input, textarea, select, [role="button"] {
-      cursor: none !important;
-    }
-  }
-
-  /* Custom Cursor Styles */
-  .custom-cursor {
-    position: fixed;
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    pointer-events: none;
-    z-index: 9999;
-    will-change: transform, background-color;
   }
 
   /* Theme Transition Effect */
@@ -140,10 +126,10 @@
     transform: translateY(0);
   }
 
-  /* Smooth scrolling for anchor links */
+  /* Custom smooth scrolling is handled by JavaScript */
   @media (prefers-reduced-motion: no-preference) {
     html {
-      scroll-behavior: smooth;
+      scroll-behavior: auto;
     }
   }
 
@@ -227,7 +213,7 @@
     .testimonial-item {
       position: relative !important;
       display: block;
-      margin: 2rem auto !important;
+      margin: 1.5rem auto !important;
       transform: rotate(0deg) !important;
       top: auto !important;
       left: auto !important;
@@ -236,10 +222,11 @@
     }
     
     .testimonial-item > div {
-      width: 90vw !important;
-      max-width: 400px !important;
+      width: 100% !important;
+      max-width: 90vw !important;
       height: auto !important;
-      min-height: 180px !important;
+      min-height: 200px !important;
+      aspect-ratio: 16/9 !important;
       margin: 0 auto;
     }
   }

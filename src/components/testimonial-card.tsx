@@ -28,7 +28,7 @@ export function TestimonialCard({
   
   return (
     <div 
-      className="absolute transition-all duration-700 ease-out hover:scale-105 hover:z-50 hover:shadow-2xl group testimonial-item"
+      className="md:absolute relative transition-all duration-700 ease-out hover:scale-105 hover:z-50 hover:shadow-2xl group testimonial-item mb-6 md:mb-0 mx-auto"
       style={{
         transform: `rotate(${rotation}deg)`,
         ...position,
@@ -36,7 +36,7 @@ export function TestimonialCard({
       }}
     >
       <div 
-        className="relative border border-gray-900/30 dark:border-gray-100/30 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 bg-white dark:bg-black"
+        className="relative border border-gray-900/30 dark:border-gray-100/30 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 bg-white dark:bg-black w-full max-w-[90vw] md:max-w-none mx-auto"
         style={{
           width: size.width,
           height: size.height,

@@ -2,30 +2,12 @@
 
 import { useEffect, useState, useRef } from "react";
 
-export default function CustomCursor() {
+export default function GojoSmallCursor() {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [isHovering, setIsHovering] = useState(false);
-  const [cursorColor, setCursorColor] = useState("#000000");
   const [isMobile, setIsMobile] = useState(false);
-  const requestRef = useRef<number | undefined>(undefined);
-
-  // Function to get contrasting color based on background
-  const getContrastColor = (element: Element): string => {
-    const computedStyle = window.getComputedStyle(element);
-    const bgColor = computedStyle.backgroundColor;
-    
-    // Parse RGB values
-    const rgb = bgColor.match(/\d+/g);
-    if (!rgb || rgb.length < 3) return "#000000";
-    
-    const [r, g, b] = rgb.map(Number);
-    
-    // Calculate relative luminance
-    const luminance = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
-    
-    // Return contrasting color
-    return luminance > 0.5 ? "#000000" : "#FFFFFF";
-  };
+  const [isVisible, setIsVisible] = useState(false);
+  const requestRef = useRef<number>();
 
   useEffect(() => {
     // Check if device is mobile/touch
@@ -50,13 +32,10 @@ export default function CustomCursor() {
     const updatePosition = (e: MouseEvent) => {
       targetPosition = { x: e.clientX, y: e.clientY };
       
-      // Get element under cursor
-      const elementUnderCursor = document.elementFromPoint(e.clientX, e.clientY);
-      if (elementUnderCursor) {
-        const newColor = getContrastColor(elementUnderCursor);
-        setCursorColor(newColor);
-      }
+      // Make cursor visible once mouse moves
+      if (!isVisible) setIsVisible(true);
       
+      // Use requestAnimationFrame for smoother updates
       if (!requestRef.current) {
         requestRef.current = requestAnimationFrame(animate);
       }
@@ -70,7 +49,6 @@ export default function CustomCursor() {
     const handleMouseEnter = () => setIsHovering(true);
     const handleMouseLeave = () => setIsHovering(false);
 
-    // Add mouse move listener
     window.addEventListener("mousemove", updatePosition);
 
     // Add hover listeners for interactive elements
@@ -93,22 +71,36 @@ export default function CustomCursor() {
         el.removeEventListener("mouseleave", handleMouseLeave);
       });
     };
-  }, [isMobile]);
+  }, [isMobile, isVisible]);
 
   // Don't render on mobile
   if (isMobile) return null;
 
   return (
     <div
-      className="custom-cursor"
+      className="fixed pointer-events-none z-[9999]"
       style={{
         left: `${position.x}px`,
         top: `${position.y}px`,
-        transform: `translate(-50%, -50%) scale(${isHovering ? 1.5 : 1})`,
-        backgroundColor: cursorColor,
-        transition: "background-color 0.2s ease, transform 0.08s cubic-bezier(0.4, 0, 0.2, 1)",
+        // Scale down from 128px to ~24px (0.19) - smaller size
+        transform: `translate(-50%, -50%) scale(${isHovering ? 0.23 : 0.19})`,
+        opacity: isVisible ? 1 : 0,
+        transition: 'transform 0.15s cubic-bezier(0.25, 0.1, 0.25, 1), opacity 0.2s ease',
+        willChange: 'transform, opacity',
       }}
-    />
+    >
+      {/* Display the Gojo cursor as an image, scaled down from 128px original size */}
+      <img 
+        src="/gojo-pointer.cur" 
+        alt="cursor"
+        className="w-32 h-32 select-none"
+        style={{
+          imageRendering: 'auto',
+          filter: isHovering ? 'drop-shadow(0 0 8px rgba(96, 165, 250, 0.8))' : 'none',
+        }}
+        draggable={false}
+      />
+    </div>
   );
 }
 
