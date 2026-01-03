@@ -50,7 +50,7 @@ export function Footer() {
             © {new Date().getFullYear()} {DATA.name}. All rights reserved.
           </p>
           <p className="italic text-center">
-             Everything negative – pressure, challenges – is all an opportunity for me to rise.
+             Everything negative, pressure, challenges is all an opportunity for me to rise.
           </p>
         </div>
       </div>

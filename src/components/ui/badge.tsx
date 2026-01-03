@@ -16,6 +16,10 @@ const badgeVariants = cva(
           "border-zinc-700 bg-transparent text-zinc-900 hover:bg-zinc-900 hover:text-zinc-100 dark:border-zinc-300 dark:bg-transparent dark:text-zinc-100 dark:hover:bg-zinc-50 dark:hover:text-zinc-900 text-[8px] px-1 py-0.5",
         subtle:
           "border-transparent bg-zinc-900 text-white hover:bg-zinc-800 dark:bg-zinc-100 dark:text-zinc-700 dark:hover:bg-zinc-200",
+        yc:
+          "border-transparent bg-[#FF6600] text-white hover:bg-[#FF7700] w-4 h-4 px-0 py-0 flex items-center justify-center text-[9px] font-bold rounded-sm",
+        minimal:
+          "border-transparent bg-transparent text-zinc-500 dark:text-zinc-500 px-0 py-0 text-[10px] font-normal italic",
       },
     },
     defaultVariants: {

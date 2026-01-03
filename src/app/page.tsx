@@ -53,7 +53,7 @@ export default function Page() {
           </BlurFade>
         </section>
       </ScrollReveal>
-      {/* <ScrollReveal delay={50}>
+      <ScrollReveal delay={50}>
         <section id="work">
           <div className="flex min-h-0 flex-col gap-y-0">
             <BlurFade delay={BLUR_FADE_DELAY * 5}>
@@ -70,13 +70,14 @@ export default function Page() {
                   subtitle={work.title}
                   href={work.href}
                   badges={work.badges}
+                  badgeVariants={'badgeVariants' in work ? work.badgeVariants as any : undefined}
                   period={`${work.start} - ${work.end ?? "Present"}`}
                 />
               </BlurFade>
             ))}
           </div>
         </section>
-      </ScrollReveal> */}
+      </ScrollReveal>
       <ScrollReveal delay={100}>
         <section id="projects">
           <div className="space-y-8 w-full py-6">

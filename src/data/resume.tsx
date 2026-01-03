@@ -63,9 +63,10 @@ export const DATA = {
 
   work: [
     {
-      company: "Paasa (YC S24)",
+      company: "Paasa",
       href: "https://www.paasa.co/",
-      badges: [],
+      badges: ["Y", "S24"],
+      badgeVariants: ["yc", "minimal"],
       location: "Remote",
       title: "Full Stack Engineer",
       logoUrl: "/paasa.jpeg",
@@ -77,9 +78,10 @@ export const DATA = {
     {
       company: "Suko",
       href: "",
-      badges: ["Founding Member"],
+      badges: ["· Founding Member"],
+      badgeVariants: ["minimal"],
       location: "Remote",
-      title: "Backend Engineer & Founding Member",
+      title: "Backend Engineer",
       logoUrl: "/hvt.jpeg",
       start: "Mar 2025",
       end: "Aug 2025",
@@ -87,14 +89,14 @@ export const DATA = {
         "Architected backend infrastructure for an anonymous social platform enabling AI-generated memory scenes from user prompts using Node.js, Express, TypeScript, and Prisma with PostgreSQL; developed WebSocket infrastructure for real-time scene broadcasting to follower feeds and REST endpoints for the public explore page. Designed a worker-based pipeline bridging ML model outputs with backend services, integrating AWS S3 for avatar and scene image storage with Redis Cloud caching using ETag validation and conditional headers, improving asset delivery performance by 60%. Containerized backend services with Docker and launched CI/CD pipelines to Google Cloud Platform; mentored 2 junior developers on system architecture patterns, accelerating feature deployment velocity by 35%.",
     },
     {
-      company: "ITSAT",
-      href: "https://www.linkedin.com/company/iatsatin/",
+      company: "Voriq AI",
+      href: "",
       badges: [],
       location: "Remote",
       title: "Full Stack Intern",
-      logoUrl: "/i.jpeg",
-      start: "Aug 2023",
-      end: "Nov 2023",
+      logoUrl: "/voriq_logo.jpg",
+      start: "Oct 2025",
+      end: "Present",
       description:
         "Actively contributed to the development and architectural scaling of IATSAT's official website, enhancing both design and system efficiency. Built UI components and managed backend tasks to improve user experience. Optimized deployment through containerization and collaborated closely with the team to shape the project's design and performance with practical, impactful ideas.",
     },

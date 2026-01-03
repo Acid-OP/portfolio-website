@@ -16,6 +16,7 @@ interface ResumeCardProps {
   subtitle?: string;
   href?: string;
   badges?: readonly string[];
+  badgeVariants?: readonly ("default" | "secondary" | "outline" | "subtle" | "yc" | "minimal")[];
   period: string;
   description?: string;
 }
@@ -26,6 +27,7 @@ export const ResumeCard = ({
   subtitle,
   href,
   badges,
+  badgeVariants,
   period,
   description,
 }: ResumeCardProps) => {
@@ -64,8 +66,8 @@ export const ResumeCard = ({
                   <span className="inline-flex gap-x-1">
                     {badges.map((badge, index) => (
                       <Badge
-                        variant="secondary"
-                        className="align-middle text-xs"
+                        variant={(badgeVariants?.[index] || "secondary") as any}
+                        className="align-middle"
                         key={index}
                       >
                         {badge}
