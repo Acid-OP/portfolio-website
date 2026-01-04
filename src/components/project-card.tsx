@@ -47,7 +47,7 @@ export function ProjectCard({
   return (
   <MagicCard 
     className={cn(
-      "cursor-pointer rounded-lg dark:shadow-2xl w-[100%] max-sm:w-full h-[350px] border-none !bg-transparent hover:scale-[1.02] transition-all duration-300",
+      "cursor-pointer rounded-lg dark:shadow-2xl w-full h-[350px] sm:h-[350px] border-none !bg-transparent hover:scale-[1.02] transition-all duration-300",
       className
     )} 
     gradientColor={`${isDarkMode ? '#262626' : 'rgba(197, 241, 241, 0.4)'}`}

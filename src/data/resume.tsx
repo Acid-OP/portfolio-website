@@ -78,7 +78,7 @@ export const DATA = {
     {
       company: "Suko",
       href: "",
-      badges: ["· Founding Member"],
+      badges: ["• Founding Member"],
       badgeVariants: ["minimal"],
       location: "Remote",
       title: "Backend Engineer",
@@ -93,7 +93,7 @@ export const DATA = {
       href: "",
       badges: [],
       location: "Remote",
-      title: "Full Stack Intern",
+      title: "AI Engineer",
       logoUrl: "/voriq_logo.jpg",
       start: "Oct 2025",
       end: "Present",
@@ -116,7 +116,7 @@ export const DATA = {
     {
       school: "Delhi Technological University",
       href: "https://www.dtu.ac.in/",
-      degree: "BE in CE",
+      degree: "Bachelor of Engineering",
       logoUrl: "/DTU.jpeg",
       start: "2023",
       end: "2027",
