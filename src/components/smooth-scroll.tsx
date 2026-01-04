@@ -27,7 +27,10 @@ export default function SmoothScroll() {
     };
     
     const handleWheel = (e: WheelEvent) => {
-      e.preventDefault();
+      // Only prevent default if not scrolling horizontally
+      if (Math.abs(e.deltaX) < Math.abs(e.deltaY)) {
+        e.preventDefault();
+      }
       
       // Adjust scroll speed: lower = slower (default is ~3-5)
       const scrollSpeed = 1.5;

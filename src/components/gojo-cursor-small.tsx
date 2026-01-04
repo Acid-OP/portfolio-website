@@ -82,21 +82,23 @@ export default function GojoSmallCursor() {
       style={{
         left: `${position.x}px`,
         top: `${position.y}px`,
-        // Scale down from 128px to ~24px (0.19) - smaller size
-        transform: `translate(-50%, -50%) scale(${isHovering ? 0.23 : 0.19})`,
+        // Scale down from 96px to ~18px (0.19) - smaller size
+        transform: `translate3d(-50%, -50%, 0) scale(${isHovering ? 0.23 : 0.19})`,
         opacity: isVisible ? 1 : 0,
         transition: 'transform 0.15s cubic-bezier(0.25, 0.1, 0.25, 1), opacity 0.2s ease',
-        willChange: 'transform, opacity',
+        willChange: 'transform',
+        backfaceVisibility: 'hidden', // Performance optimization
       }}
     >
-      {/* Display the Gojo cursor as an image, scaled down from 128px original size */}
+      {/* Display the Gojo cursor as an image, optimized size */}
       <img 
         src="/gojo-pointer.cur" 
         alt="cursor"
-        className="w-32 h-32 select-none"
+        className="w-24 h-24 select-none"
         style={{
           imageRendering: 'auto',
           filter: isHovering ? 'drop-shadow(0 0 8px rgba(96, 165, 250, 0.8))' : 'none',
+          transform: 'translateZ(0)', // Force GPU acceleration
         }}
         draggable={false}
       />
