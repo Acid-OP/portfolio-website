@@ -3,7 +3,7 @@
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
 import { GitHubLogoIcon, GlobeIcon } from '@radix-ui/react-icons'
-import { useTheme } from "next-themes";
+import { useThemeConfig } from "@/hooks/useThemeConfig";
 import Image from "next/image";
 import Link from "next/link";
 import Markdown from "react-markdown";
@@ -41,16 +41,15 @@ export function ProjectCard({
   className,
   logo,
 }: Props) {
-  const { theme } = useTheme()
-  const isDarkMode = theme === 'dark'
+  const { colors } = useThemeConfig();
 
   return (
-  <MagicCard 
+  <MagicCard
     className={cn(
       "cursor-pointer rounded-lg dark:shadow-2xl w-[100%] max-sm:w-full h-[350px] border-none !bg-transparent",
       className
-    )} 
-    gradientColor={`${isDarkMode ? '#262626' : 'rgba(197, 241, 241, 0.4)'}`}
+    )}
+    gradientColor={colors.magicCardGradient}
   >
     <ShineBorder
       className="border h-full w-full relative rounded-lg flex flex-col justify-start items-start md:shadow-xl !bg-transparent !pointer-events-none p-5" 
