@@ -34,3 +34,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# claude code temporary files
+.claude/
+*.claude-*
+claude-*.json
+claude-*.txt

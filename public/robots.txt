@@ -1,0 +1,10 @@
+# Allow all search engines to crawl
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://portfolio.rudraa.online/sitemap.xml
+
+# Crawl delay (optional, helps prevent overloading)
+Crawl-delay: 0
+

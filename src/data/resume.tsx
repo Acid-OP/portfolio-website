@@ -5,9 +5,9 @@ export const DATA = {
   name: "Gaurav",
   url: "https://portfolio.rudraa.online",
   description:
-    "i build digitial experiences that tells a story.",
+    "i build digital experiences that tell a story.",
   summary:
-    "i build, break, and rebuild — that’s how i learn. i like stacking small wins that compound over time. for me, the process is the fun part.",
+    "i build, break, and rebuild. that's how i learn. i like stacking small wins that compound over time. for me, the process is the fun part.",
   avatarUrl: "/madara.jpg",
   skills: [
     "JavaScript",
@@ -63,36 +63,42 @@ export const DATA = {
 
   work: [
     {
-      company: "Paasa (YC S24)",
+      company: "Paasa",
       href: "https://www.paasa.co/",
-      badges: [],
+      badges: ["Y", "S24"],
+      badgeVariants: ["yc", "minimal"],
       location: "Remote",
-      title: "SWE Intern",
+      title: "Full Stack Engineer",
       logoUrl: "/paasa.jpeg",
-      start: "Nov 2025",
-      end: "Present"      
-    },
-    {
-      company: "High Vision Technologies LLP",
-      href: "https://hvtllp.com/",
-      badges: [],
-      location: "Remote",
-      title: "Analyst",
-      logoUrl: "/hvt.jpeg",
-      start: "May 2024",
-      end: "Aug 2024",
-    },
-    {
-      company: "ITSAT",
-      href: "https://www.linkedin.com/company/iatsatin/",
-      badges: [],
-      location: "Remote",
-      title: "Full Stack Intern",
-      logoUrl: "/i.jpeg",
-      start: "Aug 2023",
-      end: "Nov 2023",
+      start: "Sep 2025",
+      end: "Dec 2025",
       description:
-        "Actively contributed to the development and architectural scaling of IATSAT’s official website, enhancing both design and system efficiency. Built UI components and managed backend tasks to improve user experience. Optimized deployment through containerization and collaborated closely with the team to shape the project’s design and performance with practical, impactful ideas.",
+        "Shipped UCITS screening platform from inception to production on Fly.io, architecting a scalable server-side solution managing 2,940+ UCITS-compliant investment instruments with advanced filtering and real-time data processing. Engineered an AI-powered portfolio generation engine processing user quiz responses to deliver personalized investment recommendations; orchestrated an automated cron system dispatching weekly portfolio statements via email and WhatsApp, reducing manual outreach by 40%. Constructed server-side Next.js components with SSR architecture for production tools, including a global brokerage calculator and US estate tax calculator, increasing user engagement by 15%. Built automation pipelines integrating Strapi CMS, PostHog analytics, WATI, and Slack to streamline content publishing with SEO optimization, collaborating with marketing teams to synchronize user submissions across platforms.",
+    },
+    {
+      company: "Suko",
+      href: "",
+      badges: ["• Founding Member"],
+      badgeVariants: ["minimal"],
+      location: "Remote",
+      title: "Backend Engineer",
+      logoUrl: "/hvt.jpeg",
+      start: "Mar 2025",
+      end: "Aug 2025",
+      description:
+        "Architected backend infrastructure for an anonymous social platform enabling AI-generated memory scenes from user prompts using Node.js, Express, TypeScript, and Prisma with PostgreSQL; developed WebSocket infrastructure for real-time scene broadcasting to follower feeds and REST endpoints for the public explore page. Designed a worker-based pipeline bridging ML model outputs with backend services, integrating AWS S3 for avatar and scene image storage with Redis Cloud caching using ETag validation and conditional headers, improving asset delivery performance by 60%. Containerized backend services with Docker and launched CI/CD pipelines to Google Cloud Platform; mentored 2 junior developers on system architecture patterns, accelerating feature deployment velocity by 35%.",
+    },
+    {
+      company: "Voriq AI",
+      href: "",
+      badges: [],
+      location: "Remote",
+      title: "AI Engineer",
+      logoUrl: "/voriq_logo.jpg",
+      start: "Oct 2025",
+      end: "Present",
+      description:
+        "Actively contributed to the development and architectural scaling of IATSAT's official website, enhancing both design and system efficiency. Built UI components and managed backend tasks to improve user experience. Optimized deployment through containerization and collaborated closely with the team to shape the project's design and performance with practical, impactful ideas.",
     },
     {
       company: "Freelancer",
@@ -110,7 +116,7 @@ export const DATA = {
     {
       school: "Delhi Technological University",
       href: "https://www.dtu.ac.in/",
-      degree: "BE in CE",
+      degree: "Bachelor of Engineering",
       logoUrl: "/DTU.jpeg",
       start: "2023",
       end: "2027",
@@ -220,6 +226,36 @@ export const DATA = {
         },
       ],
       image: "/promptly.png",
+    },
+  ],
+  testimonials: [
+    {
+      image: "/IMG_8619.jpeg",
+      rotation: -5,
+      position: { top: "0", left: "0" },
+      size: { width: "280px", height: "150px" },
+      zIndex: 3,
+    },
+    {
+      image: "/IMG_8620.jpeg",
+      rotation: 3,
+      position: { top: "0", left: "55%" },
+      size: { width: "260px", height: "210px" },
+      zIndex: 2,
+    },
+    {
+      image: "/IMG_8621.jpeg",
+      rotation: -4,
+      position: { top: "240px", left: "0" },
+      size: { width: "320px", height: "190px" },
+      zIndex: 4,
+    },
+    {
+      image: "/IMG_8624.jpeg",
+      rotation: 4,
+      position: { top: "320px", left: "55%" },
+      size: { width: "280px", height: "95px" },
+      zIndex: 1,
     },
   ],
 } as const;

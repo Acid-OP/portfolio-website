@@ -1,0 +1,22 @@
+{
+  "name": "Gaurav Kapur - Full Stack & AI Engineer",
+  "short_name": "Gaurav Kapur",
+  "description": "Full Stack & AI Engineer at Paasa (YC S24), Suko, Voriq AI. Portfolio showcasing projects and experience.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "icons": [
+    {
+      "src": "/madara.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "/madara.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg"
+    }
+  ]
+}
+
