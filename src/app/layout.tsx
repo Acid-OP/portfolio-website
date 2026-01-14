@@ -6,7 +6,7 @@ import SmoothScroll from "@/components/smooth-scroll";
 import { QuickContact } from "@/components/quick-contact";
 import ScrollToTop from "@/components/scroll-to-top";
 import { ScrollToTopOnMount } from "@/components/scroll-to-top-on-mount";
-import ThemeTransition from "@/components/theme-transition";
+import { ThemeTransition } from "@/components/theme-transition";
 import { DATA } from "@/data/resume";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
