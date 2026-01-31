@@ -90,7 +90,7 @@ export const DATA = {
     },
     {
       company: "Voriq AI",
-      href: "",
+      href: "https://voriq.ai/",
       badges: [],
       location: "Remote",
       title: "AI Engineer",
