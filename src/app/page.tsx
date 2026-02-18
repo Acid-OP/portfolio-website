@@ -190,33 +190,6 @@ export default function Page() {
           </div>
         </section>
       </ScrollReveal>
-      <ScrollReveal delay={200}>
-        <section id="education">
-          <div className="flex min-h-0 flex-col gap-y-1">
-            <BlurFade delay={BLUR_FADE_DELAY * 7}>
-              <h2 className="text-xl font-bold mb-4 bg-gradient-to-r from-foreground to-foreground/60 bg-clip-text text-transparent">
-                Education
-              </h2>
-            </BlurFade>
-            {DATA.education.map((education, id) => (
-              <BlurFade
-                key={education.school}
-                delay={BLUR_FADE_DELAY * 8 + id * 0.05}
-              >
-                <ResumeCard
-                  key={education.school}
-                  href={education.href}
-                  logoUrl={education.logoUrl}
-                  altText={education.school}
-                  title={education.school}
-                  subtitle={education.degree}
-                  period=""
-                />
-              </BlurFade>
-            ))}
-          </div>
-        </section>
-      </ScrollReveal>
       <ScrollReveal delay={250}>
         <section id="contact" className="pb-8 sm:pb-12">
           <div className="flex min-h-0 flex-col gap-y-4 sm:gap-y-6 px-4">
@@ -242,16 +215,6 @@ export default function Page() {
                     <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20a2 2 0 0 0 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zM9 14H7v-2h2v2zm4 0h-2v-2h2v2zm4 0h-2v-2h2v2zm-8 4H7v-2h2v2zm4 0h-2v-2h2v2zm4 0h-2v-2h2v2z"/>
                   </svg>
                   Schedule a Call
-                </a>
-                <a
-                  href="/resume.pdf"
-                  download
-                  className="flex items-center gap-2 px-4 sm:px-5 md:px-6 py-2 sm:py-2.5 md:py-3 rounded-xl bg-foreground text-background hover:bg-foreground/90 hover:scale-105 hover:shadow-lg transition-all duration-300 font-semibold text-xs sm:text-sm shadow-md"
-                >
-                  <svg className="size-4 sm:size-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                  </svg>
-                  Download Resume
                 </a>
               </div>
             </BlurFade>

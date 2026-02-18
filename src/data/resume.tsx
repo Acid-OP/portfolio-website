@@ -5,9 +5,9 @@ export const DATA = {
   name: "Gaurav",
   url: "https://portfolio.rudraa.online",
   description:
-    "i build digital experiences that tell a story.",
+    "I build digital experiences that tell a story.",
   summary:
-    "i build, break, and rebuild. that's how i learn. i like stacking small wins that compound over time. for me, the process is the fun part.",
+    "I build, break, and rebuild. that's how I learn. I like stacking small wins that compound over time. For me, the process is the fun part.",
   avatarUrl: "/madara.jpg",
   skills: [
     "JavaScript",
