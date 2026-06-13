@@ -129,19 +129,15 @@ export const DATA = {
       dates: "Dec 2025 - Present",
       active: true,
       description:
-        "An AI-powered app builder that generates and edits full-stack applications from natural language prompts. Built as a Turborepo monorepo with a Next.js editor, an orchestrator powered by the AI SDK with Gemini, BullMQ job queues, Redis, and isolated sandbox execution for running generated code.",
+        "A Lovable clone, an AI app builder that turns plain-English prompts into full-stack web apps you can preview, edit, and ship in real time.",
       technologies: [
         "Next.js",
-        "TypeScript",
         "React",
-        "AI SDK",
+        "TypeScript",
         "Gemini",
-        "BullMQ",
-        "Redis",
-        "Monaco Editor",
-        "Zustand",
-        "Turborepo",
-        "Docker"
+        "Docker",
+        "Traefik",
+        "Redis"
       ],
       links: [
         {
@@ -158,19 +154,15 @@ export const DATA = {
       dates: "Feb 2026 - Apr 2026",
       active: true,
       description:
-        "A live events and webinar platform for hosts, viewers, and admins. Supports browser-based broadcasting and OBS/RTMP streaming via AWS IVS, with live chat, reactions, polls, replays, and an AI layer for moderation, Q&A, sentiment analysis, and host coaching.",
+        "A live events and webinar platform powered by AWS IVS for ultra-low-latency broadcasting, with live chat, reactions, polls, replays, and AI-driven moderation and Q&A.",
       technologies: [
+        "AWS IVS",
+        "IVS Chat",
         "Next.js",
         "React",
         "TypeScript",
         "Supabase",
-        "AWS IVS",
-        "TanStack Query",
-        "Zustand",
-        "AI SDK",
-        "Gemini",
-        "TailwindCSS",
-        "Playwright"
+        "Gemini"
       ],
       links: [
         {
