@@ -25,7 +25,8 @@ interface Props {
     href: string;
   }[];
   className?: string;
-  logo?: string; 
+  logo?: string;
+  imageClassName?: string;
 }
 
 export function ProjectCard({
@@ -40,6 +41,7 @@ export function ProjectCard({
   links,
   className,
   logo,
+  imageClassName,
 }: Props) {
   const { colors } = useThemeConfig();
 
@@ -75,7 +77,10 @@ export function ProjectCard({
             alt={title}
             width={30}
             height={30}
-            className="h-8 w-8 overflow-hidden object-cover object-top rounded-full"
+            className={cn(
+              "h-8 w-8 overflow-hidden object-cover object-top rounded-full",
+              imageClassName
+            )}
           />
         )}
       </div>

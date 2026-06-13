@@ -129,14 +129,18 @@ export const DATA = {
       dates: "Dec 2025 - Present",
       active: true,
       description:
-        "A Lovable clone, an AI app builder that turns plain-English prompts into full-stack web apps you can preview, edit, and ship in real time.",
+        "An AI app builder that turns plain-English prompts into full-stack web apps, spinning up isolated sandboxes to preview, edit, and ship them in real time.",
       technologies: [
         "Next.js",
         "React",
         "TypeScript",
-        "Gemini",
+        "Vercel AI SDK",
+        "Agents",
+        "Sandbox",
         "Docker",
         "Traefik",
+        "BullMQ",
+        "Workers",
         "Redis"
       ],
       links: [
@@ -147,6 +151,7 @@ export const DATA = {
         },
       ],
       image: "/lovable.svg",
+      imageClassName: "dark:invert",
     },
     {
       title: "StreamOS",
@@ -158,6 +163,8 @@ export const DATA = {
       technologies: [
         "AWS IVS",
         "IVS Chat",
+        "S3",
+        "WebSocket",
         "Next.js",
         "React",
         "TypeScript",
