@@ -153,6 +153,35 @@ export const DATA = {
       image: "/lovable.svg",
     },
     {
+      title: "StreamOS",
+      href: "https://github.com/Acid-OP/RTMP",
+      dates: "Feb 2026 - Apr 2026",
+      active: true,
+      description:
+        "A live events and webinar platform for hosts, viewers, and admins. Supports browser-based broadcasting and OBS/RTMP streaming via AWS IVS, with live chat, reactions, polls, replays, and an AI layer for moderation, Q&A, sentiment analysis, and host coaching.",
+      technologies: [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "Supabase",
+        "AWS IVS",
+        "TanStack Query",
+        "Zustand",
+        "AI SDK",
+        "Gemini",
+        "TailwindCSS",
+        "Playwright"
+      ],
+      links: [
+        {
+          type: "Source",
+          href: "https://github.com/Acid-OP/RTMP",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "/streamos.svg",
+    },
+    {
       title: "DrawDeck",
       href:"//github.com/Acid-OP/second-brain-frontend",
       dates: "May 2025 - Aug 2025",
