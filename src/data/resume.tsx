@@ -124,6 +124,35 @@ export const DATA = {
   ],
   projects: [
     {
+      title: "Lovable",
+      href: "https://github.com/Acid-OP/Lovable",
+      dates: "Dec 2025 - Present",
+      active: true,
+      description:
+        "An AI-powered app builder that generates and edits full-stack applications from natural language prompts. Built as a Turborepo monorepo with a Next.js editor, an orchestrator powered by the AI SDK with Gemini, BullMQ job queues, Redis, and isolated sandbox execution for running generated code.",
+      technologies: [
+        "Next.js",
+        "TypeScript",
+        "React",
+        "AI SDK",
+        "Gemini",
+        "BullMQ",
+        "Redis",
+        "Monaco Editor",
+        "Zustand",
+        "Turborepo",
+        "Docker"
+      ],
+      links: [
+        {
+          type: "Source",
+          href: "https://github.com/Acid-OP/Lovable",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "/lovable.svg",
+    },
+    {
       title: "DrawDeck",
       href:"//github.com/Acid-OP/second-brain-frontend",
       dates: "May 2025 - Aug 2025",
